@@ -9,18 +9,18 @@ import pycountry
 
 
 # Data Loading and Preprocessing
-file_pathgp = r"C:\Users\user\Desktop\PIC_EURO\df_Public_spending.cvs"
-df_Public_spending = pd.read_csv(file_pathgp)
-file_pathdsp = r"C:\Users\user\Desktop\PIC_EURO\df_UNEMPLOYMENT.cvs"
-df_UNEMPLOYMENT = pd.read_csv(file_pathdsp)
-file_pathipc = r"C:\Users\user\Desktop\PIC_EURO\df_IPC.cvs"
-df_IPC = pd.read_csv(file_pathipc)
-file_pathpibp = r"C:\Users\user\Desktop\PIC_EURO\df_GDP_PC.cvs"
-df_GDP_PC = pd.read_csv(file_pathpibp)
-file_pathp = r"C:\Users\user\Desktop\PIC_EURO\df_Population.cvs"
-df_Population = pd.read_csv(file_pathp)
-file_pathtpib = r"C:\Users\user\Desktop\PIC_EURO\df_GDP_rate.cvs"
-df_GDP_rate = pd.read_csv(file_pathtpib)
+urlps = "https://raw.githubusercontent.com/enzohern/Eurozone/refs/heads/main/df_Public_spending.cvs"
+df_Public_spending = pd.read_csv(urlps)
+urlup = "https://raw.githubusercontent.com/enzohern/Eurozone/refs/heads/main/df_UNEMPLOYMENT.cvs"
+df_UNEMPLOYMENT = pd.read_csv(urlup)
+urlipc = "https://raw.githubusercontent.com/enzohern/Eurozone/refs/heads/main/df_IPC.cvs"
+df_IPC = pd.read_csv(urlipc)
+urlgdppc = "https://raw.githubusercontent.com/enzohern/Eurozone/refs/heads/main/df_GDP_PC.cvs"
+df_GDP_PC = pd.read_csv(urlgdppc)
+urlpopu = "https://raw.githubusercontent.com/enzohern/Eurozone/refs/heads/main/df_Population.cvs"
+df_Population = pd.read_csv(urlpopu)
+urlgdprate = "https://raw.githubusercontent.com/enzohern/Eurozone/refs/heads/main/df_GDP_rate.cvs"
+df_GDP_rate = pd.read_csv(urlgdprate)
 
 # Rename columns that vary (OBS_VALUE in each DataFrame) with unique names
 df_Public_spending.rename(columns={'OBS_VALUE': 'Public_spending'}, inplace=True)
